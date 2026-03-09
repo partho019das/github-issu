@@ -82,15 +82,3 @@ function updateCounter(tab, posts) {
 }
 
 
-// {
-//   id: 43,
-//   title: "Create docker deployment guide",
-//   description: "Write comprehensive guide for deploying the application using Docker and docker-compose.",
-//   status: "closed",
-//   labels: ["documentation"],
-//   priority: "medium",
-//   author: "docker_dave",
-//   assignee: "mike_docs",
-//   createdAt: "2024-01-06T12:00:00Z",
-//   updatedAt: "2024-01-24T16:30:00Z"
-// }
