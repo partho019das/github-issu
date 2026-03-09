@@ -1,62 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                        <!-- daisyui -->
-       <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- daisyui -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Issue Tracker</title>
 </head>
-<body>
-   <header>
-<div class="navbar bg-base-100 shadow-sm flex justify-between">
-   <h1 class="text-2xl font-bold">All Issues</h1>
-<div>
-    <img class="w-10" src="assets/github-logo.png" alt="">
-</div>
+<body class="bg-gray-50">
 
- <div class="search flex gap-2">
-     <input type="text" placeholder="Search Issues" class="input input-primary" />
-     <button class="btn btn-primary w-[100px]">Search</button>
- </div>
-</div>
-   </header>
-        
-<main>
- <div class="mt-3 p-3 flex gap-2">
-  <div>
-      <button id="all" class="btn bg-blue-700 btn-sm relative" onclick="switchTab('all')">
-      All
-   
-    </button>
-    <button id="open" class="btn btn-sm relative" onclick="switchTab('open')">
-      Open
-     
-    </button>
-    <button id="closed" class="btn btn-sm relative" onclick="switchTab('closed')">
-      Close
-     </button>
-  </div>
-  </div>
-</main>
-<div class="mx-auto bg-white shadow m-3 p-4 flex flex-col items-start">
-  <div>
-    <h1 id="issueCount" class="text-2xl font-bold flex items-center gap-2">
-      <img src="assets/Aperture.png" alt="" class="w-6 h-6"> 0 issues
-    </h1>
-    <p class="text-[#64748B] mt-1">Track and manage your project issues</p>
-  </div>
-</div>
-
-<section id="card-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 bg-[#FBFBFB] p-2">
-
-</section>
-
+  <!-- header -->
+  <header>
+    <div class="navbar bg-base-100 shadow-sm flex justify-between">
+      <h1 class="text-2xl font-bold">All Issues</h1>
+      <div><img class="w-10" src="assets/github-logo.png" alt=""></div>
+      <div class="search flex gap-2">
+        <input type="text" placeholder="Search Issues" class="input input-primary" />
+        <button class="btn btn-primary w-[100px]">Search</button>
+      </div>
+    </div>
+  </header>
   
+  <!-- tabs -->
+  <main class="mt-3 p-3 flex gap-2">
+    <div>
+      <button id="all" class="btn bg-blue-700 btn-sm relative" onclick="switchTab('all')">All</button>
+      <button id="open" class="btn btn-sm relative" onclick="switchTab('open')">Open</button>
+      <button id="closed" class="btn btn-sm relative" onclick="switchTab('closed')">Close</button>
+    </div>
+  </main>
+
+  <!-- issue count -->
+  <div class="mx-auto bg-white shadow m-3 p-4 flex flex-col items-start">
+    <div>
+      <h1 id="issueCount" class="text-2xl font-bold flex items-center gap-2">
+        <img src="assets/Aperture.png" alt="" class="w-6 h-6"> 0 issues
+      </h1>
+      <p class="text-[#64748B] mt-1">Track and manage your project issues</p>
+    </div>
+  </div>
+
+  <!-- card container -->
+  <section id="card-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 bg-[#FBFBFB] p-2"></section>
+
+  <!-- modal overlay -->
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50 p-4">
+    <div id="overlayContent" class="bg-white p-6 rounded shadow-lg max-w-lg w-full relative">
+      <button id="closeOverlay" class="absolute top-2 right-2 text-gray-500 hover:text-black text-xl font-bold">✖</button>
+      <div id="overlayBody"></div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="home.js"></script>
 
 </body>
-
-<script src="home.js"></script>
 </html>
