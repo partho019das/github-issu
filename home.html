@@ -24,27 +24,37 @@
 </div>
    </header>
         
-   <main>
-    <div class="mt-3 p-3">
- <button id="all" onclick="switchTab(`all`)" class="btn bg-blue-700 btn-sm">All</button>
- <button id="open" onclick="switchTab(`open`)" class="btn btn-sm">Open</button>
- <button id="close" onclick="switchTab(`close`)" class="btn btn-sm">Close</button>
-    </div>
-   </main>
-                   <!-- card added dainamicly -->
-   <section  class="card grid grid-cols-2 bg-[#FBFBFB] gap-2 sm:grid-cols-3 md:grid-cols-4">
+<main>
+ <div class="mt-3 p-3 flex gap-2">
+  <div>
+      <button id="all" class="btn bg-blue-700 btn-sm relative" onclick="switchTab('all')">
+      All
+   
+    </button>
+    <button id="open" class="btn btn-sm relative" onclick="switchTab('open')">
+      Open
+     
+    </button>
+    <button id="closed" class="btn btn-sm relative" onclick="switchTab('closed')">
+      Close
+     </button>
+  </div>
+  </div>
+</main>
+<div class="mx-auto bg-white shadow m-3 p-4 flex flex-col items-start">
+  <div>
+    <h1 id="issueCount" class="text-2xl font-bold flex items-center gap-2">
+      <img src="assets/Aperture.png" alt="" class="w-6 h-6"> 0 issues
+    </h1>
+    <p class="text-[#64748B] mt-1">Track and manage your project issues</p>
+  </div>
+</div>
 
-           <div id="card-container" class="bg-white p-4 shadow-2xl">
-              <h1 class="font-bold text-2xl">Fix navigation menu on mobile <br>devices</h1>
-              <p class="text-[#64748B]">The navigation menu doesn't collapse <br> properly on mobile devices...</p>
-              <div class="badge bg-[#FECACA] border border-[#EF4444] font-semibold text-[#EF4444] rounded-full">BUG</div>
- <div class="badge bg-[#FDE68A] border border-[#D97706] font-semibold text-[#D97706] rounded-full">HELP WANTED</div>
-<hr class="mt-2 w-full">
- <p class="text-[#64748B]">#1
-by john_doe</p>
-<p class="text-[#64748B]">1/15/2024</p>
-           </div>
+<section id="card-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 bg-[#FBFBFB] p-2">
 
+</section>
+
+  
 
 </body>
 
